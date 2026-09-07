@@ -59,7 +59,7 @@ export const products: Product[] = names.map((name, i) => ({
 
 export const getProduct = (id: string) => products.find((p) => p.id === id);
 
-export const TELEGRAM_USER = "iamlegitvendor";
+export const TELEGRAM_USER = "iamhotvendor";
 export const TELEGRAM_URL = `https://t.me/${TELEGRAM_USER}`;
 
 export const telegramCheckoutUrl = (
