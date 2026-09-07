@@ -1,0 +1,176 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * HotShop design system — black + red premium.
+ * All colors in oklch. Never hardcode colors in components.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  --font-display: "Sora", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --radius: 0.875rem;
+  --background: oklch(0.09 0.008 20);
+  --foreground: oklch(0.98 0 0);
+  --surface: oklch(0.13 0.012 20);
+  --surface-elevated: oklch(0.17 0.016 20);
+  --card: oklch(0.13 0.012 20);
+  --card-foreground: oklch(0.98 0 0);
+  --popover: oklch(0.12 0.012 20);
+  --popover-foreground: oklch(0.98 0 0);
+  --primary: oklch(0.58 0.235 25.5);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.19 0.018 20);
+  --secondary-foreground: oklch(0.98 0 0);
+  --muted: oklch(0.18 0.014 20);
+  --muted-foreground: oklch(0.75 0.008 20);
+  --accent: oklch(0.24 0.05 25);
+  --accent-foreground: oklch(0.98 0 0);
+  --destructive: oklch(0.58 0.235 25.5);
+  --destructive-foreground: oklch(0.99 0 0);
+  --border: oklch(0.26 0.03 22);
+  --input: oklch(0.24 0.025 22);
+  --ring: oklch(0.58 0.235 25.5);
+
+  --gradient-hero: radial-gradient(
+      ellipse 80% 60% at 50% -10%,
+      color-mix(in oklab, var(--primary) 32%, transparent),
+      transparent 70%
+    ),
+    linear-gradient(180deg, oklch(0.11 0.02 22), var(--background));
+  --gradient-primary: linear-gradient(
+    135deg,
+    var(--primary),
+    oklch(0.45 0.19 22)
+  );
+  --gradient-card: linear-gradient(
+    160deg,
+    color-mix(in oklab, var(--primary) 8%, var(--surface)),
+    var(--surface)
+  );
+  --shadow-glow: 0 0 40px -10px color-mix(in oklab, var(--primary) 65%, transparent);
+  --shadow-card: 0 20px 50px -25px oklch(0 0 0 / 0.9);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+@utility bg-hero-glow {
+  background-image: var(--gradient-hero);
+}
+
+@utility bg-gradient-primary {
+  background-image: var(--gradient-primary);
+}
+
+@utility bg-gradient-card {
+  background-image: var(--gradient-card);
+}
+
+@utility shadow-glow {
+  box-shadow: var(--shadow-glow);
+}
+
+@utility shadow-card {
+  box-shadow: var(--shadow-card);
+}
+
+@utility glass-panel {
+  background-color: color-mix(in oklab, var(--surface) 70%, transparent);
+  backdrop-filter: blur(14px);
+  border: 1px solid color-mix(in oklab, var(--primary) 18%, var(--border));
+}
+
+@utility text-gradient-primary {
+  background-image: linear-gradient(
+    100deg,
+    var(--foreground) 20%,
+    var(--primary) 90%
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+@utility animate-fade-up {
+  animation: fade-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@utility animate-slide-in-notify {
+  animation: slide-in-notify 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-notify {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
