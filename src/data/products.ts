@@ -57,16 +57,6 @@ export const products: Product[] = names.map((name, i) => ({
   poster: covers[i] ?? "",
 }));
 
-products[0]!.subProducts = Array.from({ length: 10 }, (_, i) => ({
-  id: `p1-${i + 1}`,
-  code: `p1-${i + 1}`,
-  name: `Digital Pack 1-${i + 1}`,
-  price: [35.99, 30.49, 35.99, 30.49, 50.49, 45.99, 45.99, 35.49, 40.99, 90.49][i]!,
-  description: `Part of Digital Pack 1 — individual item ${i + 1} of 10.`,
-  video: products[0]!.video,
-  poster: products[0]!.poster,
-}));
-
 export const getProduct = (id: string) => products.find((p) => p.id === id);
 
 export const TELEGRAM_USER = "megastuffrs";
