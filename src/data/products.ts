@@ -28,9 +28,9 @@ const productVideo = (i: number): string =>
   i >= 1 && i <= 24 ? `/videos/p${i}.mp4` : "";
 
 const names = [
-  "Gay Porn", "CP Penetration", "Teens", "GAY Babies", "Dad and Son",
-  "White Gay", "White Gay Cp E404", "Cp group whith 900 vds", "CP whith 500 vds", "Bro adn Bro",
-  "Group Vip", "Darkzadie", "Ivanka and Bro", "Izzy And Bro", "Blackmail",
+  "Gay Porn", "Gay CP Penetration", "Gay Teens", "Gay Babies", "Gay Dad and Son",
+  "White Gay", "White Gay Cp E404", "Gay Cp group whith 900 vds", "Gay CP whith 500 vds", " Gay Bro and Bro",
+  "Gay Group Vip", "Darkzadie", "Ivanka and Bro", "Izzy And Bro", "Blackmail",
   "High Shcool Young", "Anxous Panda", "Omgle", "Monkey App", "Savannah",
   "Gay Porno", "Father And Son", "Tens Latina", "Lizzy", "Group vip",
 ];
