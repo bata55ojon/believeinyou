@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Check, Gift, Bitcoin, Wallet, Coins, Send } from "lucide-react";
+import { Check, Gift, Bitcoin, Wallet, Coins, Send, QrCode, Banknote } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -12,6 +12,18 @@ import { telegramCheckoutUrl, type Product } from "@/data/products";
 import { useI18n } from "@/i18n";
 
 const methods = [
+  {
+    id: "Pix",
+    icon: QrCode,
+    label: "PIX",
+    hint: "Pagamento instantâneo via QR Code / Chave",
+  },
+  {
+    id: "Cash App",
+    icon: Banknote,
+    label: "Cash App / Cash",
+    hint: "Pagamento via Cash App ou saldo",
+  },
   {
     id: "PayPal",
     icon: Wallet,
