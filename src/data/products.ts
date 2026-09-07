@@ -28,23 +28,23 @@ const productVideo = (i: number): string =>
   i >= 1 && i <= 24 ? `/videos/p${i}.mp4` : "";
 
 const names = [
-  "Digital Pack 1", "Digital Pack 2", "Digital Pack 3", "Digital Pack 4", "Digital Pack 5",
-  "Digital Pack 6", "Digital Pack 7", "Digital Pack 8", "Digital Pack 9", "Digital Pack 10",
-  "Digital Pack 11", "Digital Pack 12", "Digital Pack 13", "Digital Pack 14", "Digital Pack 15",
-  "Digital Pack 16", "Digital Pack 17", "Digital Pack 18", "Digital Pack 19", "Digital Pack 20",
-  "Digital Pack 21", "Digital Pack 22", "Digital Pack 23", "Digital Pack 24", "VIP Digital Bundle",
+  "Gay Porn", "CP Penetration", "Teens", "GAY Babies", "Dad and Son",
+  "White Gay", "White Gay Cp E404", "Cp group whith 900 vds", "CP whith 500 vds", "Bro adn Bro",
+  "Group Vip", "Darkzadie", "Ivanka and Bro", "Izzy And Bro", "Blackmail",
+  "High Shcool Young", "Anxous Panda", "Omgle", "Monkey App", "Savannah",
+  "Gay Porno", "Father And Son", "Tens Latina", "Lizzy", "Group vip",
 ];
 
 const prices = [
-  75.99, 50.99, 120.99, 55.99, 45.99, 50.99, 60.50, 75.99, 49.49, 24.99,
+  30.99, 30.99, 45.99, 40.99, 45.99, 50.99, 40.50, 45.99, 60.49, 50.99,
   80.59, 75.99, 45.99, 50.49, 34.99, 70.99, 39.99, 42.50, 44.99, 47.99,
   49.99, 54.99, 59.99, 64.99, 79.99,
 ];
 
 const descriptions = names.map((_, i) =>
   i === 24
-    ? "A complete VIP digital bundle."
-    : "A digital collection with organized content and regular updates."
+    ? "Full forlder."
+    : "A complete collection with organized content and regular updates."
 );
 
 export const products: Product[] = names.map((name, i) => ({
